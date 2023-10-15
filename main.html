@@ -1,0 +1,426 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Binomo X - Introduction</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/iNQzTJ3b0rDFLW0YQGHFV8_OHh-7QMvOD26ihxFZf1cb61ANvD3LDLl3A00xwL-Yrg" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .container {
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .header {
+            position: relative;
+            background-size: cover;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .header h1 {
+            color: #fee54d;
+            font-weight: normal;
+            font-size: 30px;
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 15px;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            border-bottom: 0.75px solid #fee54d;
+            backdrop-filter: blur(7.45px);
+            -webkit-backdrop-filter: blur(7.45px);
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 15px;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 5.75px 15px;
+            position: relative;
+        }
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15.75px;
+            font-family: 'Mulish', sans-serif;
+            transition: color 0.3s;
+        }
+        .nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #f5df4d;
+            bottom: -10px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav li:hover a:before {
+            transform: scaleX(1);
+        }
+        .about-us {
+            background-color: #1d1d1d;
+            padding: 45px;
+            border-radius: 30px;
+            margin: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .about-us h2 {
+            font-size: 30px;
+            font-family: 'Prompt', sans-serif;
+            color: #f5df4d;
+        }
+        .partner-text {
+            padding: 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .partner-text h2 {
+            font-size: 30px;
+            color: #f5df4d;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+        }
+        .about-us p {
+            font-size: 17.75px;
+            line-height: 1.45;
+            margin: 0 0 21px;
+        }
+        .action-button {
+            display: inline-block;
+            padding: 12px 45px;
+            background-color: #fee54d;
+            color: #212121;
+            border-radius: 9px;
+            margin-top: 21px;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .action-button:hover {
+            background-color: #fff;
+        }
+        .install {
+            display: inline-block;
+            color: #fee54d;
+            border-radius: 9px;
+            border: 1.45px solid #fee54d;
+            padding: 5px 30px;
+            justify-content: center;
+            font-size: 17.75px;
+            transition: background-color 0.3s;
+        }
+        .install:hover {
+            background-color: #000;
+        }
+        .events {
+            padding: 45px 45px;
+            background-image: linear-gradient(to bottom, #000, #fee54d);
+            margin: 60px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .events h2 {
+            font-size: 30px;
+            color: #fee54d;
+            font-family: 'Prompt', sans-serif;
+            margin: 0 0 21px;
+            padding: 0;
+        }
+        .event-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .event {
+            width: 100%;
+            padding: 21px;
+            border-radius: 15px;
+            background-color: #1d1d1d;
+            display: flex;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 21px;
+        }
+        .event-details {
+            color: #f5f5f5;
+        }
+        .event-details h3 {
+            font-size: 21px;
+            margin: 0;
+            padding: 0;
+        }
+        .event-details p {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+        .event:hover {
+            transform: translateY(-5px);
+            box-shadow: 3px 3px 30px #000;
+        }
+        .partner-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 45px;
+        }
+        .partner {
+            margin: 12px;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .partner img {
+            max-width: 45px;
+            margin-right: 15px;
+        }
+        .partner:hover {
+            transform: translateY(-5px);
+        }
+        .footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 30px;
+            font-size: 15px;
+            font-family: 'Poppins'
+        }
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 45px;
+        }
+        .footer-column {
+            flex: 1;
+            margin-right: 30px;
+            padding-right: 30px;
+            border-right: 1px solid #fee54d;
+            transform: translateY(15px);
+            opacity: 0;
+            animation: slideUp 0.5s ease-in-out 0.2s forwards, fadeIn 0.5s ease-in-out 0.2s forwards;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(15px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .footer-column:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        .footer-column ul li a:hover {
+            color: #fee54d;
+        }
+        .footer-credits {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        @media (max-width: 745px) {
+            .footer-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-column {
+                margin-right: 0;
+                margin-bottom: 15px;
+                padding-right: 0;
+                border-right: none;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <img src="https://binomopromo.com/p-assets/shared/assets/images/components/lui-logo/logo-light-8736e8c880844b6f6864.svg" style="max-width: 145px;" alt="Binomo">
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="https://binomo.com/in-en">Pivot<div class="nav-effect"></div></a></li>
+                <li><a href="https://binomo-x.github.io/XVersion/vip.html">Vip<div class="nav-effect"></div></a></li>
+                <li><a href="https://blog.binomo.com/">Blog<div class="nav-effect"></div></a></li>
+                <li><a href="https://binomo2.zendesk.com/hc/en-us">Help<div class="nav-effect"></div></a></li>
+                <a href="#" class="install" style="color: #fee54d; margin-left: 15px;">Install X</a>
+            </ul>
+        </div>
+        <div class="about-us">
+            <h2>Meet X from Binomo</h2>
+            <p>X is not just a trading platform, revolution in the world of investments. With Binomo x, you can seamlessly trade over 9000 cryptocurrencies, invest in global stock markets, mutual funds, and more.</p>
+            <p>Join our community of 1 million traders from 90+ countries, and experience trading like never before.</p>
+            <a href="https://binomo.com/onboarding" class="action-button">Start Trading</a>
+        </div>
+        <h2 style="color: #fee54d; font-size: 30px;
+            text-align: center; margin-top: 75px; font-family: 'Prompt', sans-serif;">Global Markets</h2>
+        <p style="color: #fff; font-family: 'Poppins', sans-serif; font-size: 17.45px; margin: 30px;
+            text-align: center;">Access over 130+ live global markets with a minimum investment of just one hundred rupees. Explore extensive trading opportunities and diversify your portfolio effortlessly. Maximize your potential for profit with our user-friendly platform and expert insights. Start trading professionally today.</p>
+        <body style="background-color:#000000;"><div class="tradingview-widget-container__widget"></div>   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>   {   "exchanges": [],   "dataSource": "SPX500",   "grouping": "sector",   "blockSize": "market_cap_basic",   "blockColor": "change",   "locale": "in",   "symbolUrl": "",   "colorTheme": "dark",   "hasTopBar": true,   "isDataSetEnabled": true,   "isZoomEnabled": true,   "hasSymbolTooltip": false,   "width": "100%",   "height": "475" } </script> </body>
+        <h2 style="color: #fee54d; font-size: 30px;
+            text-align: center; margin-top: 75px; font-family: 'Prompt', sans-serif;">Crytoex Insights</h2>
+        <p style="color: #fff; font-family: 'Poppins', sans-serif; font-size: 17.45px; margin: 30px;
+            text-align: center;">Dive into the world of trading with 9000+ cryptocurrencies on the X platform. Setting the pace with a remarkable 10x speed advantage over competitors, X redefines trading experiences. Empower your strategies with cutting-edge multi-trading tools, making victory the only option.</p>
+        <body style="background-color:#000000;"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>   {   "dataSource": "Crypto",   "blockSize": "market_cap_calc",   "blockColor": "change",   "locale": "in",   "symbolUrl": "",   "colorTheme": "dark",   "hasTopBar": true,   "isDataSetEnabled": true,   "isZoomEnabled": true,   "hasSymbolTooltip": true,   "width": "100%",   "height": "475" }   </script></body>
+        <div class="events">
+            <h2><span style="color: #fee54d">Upcoming Events</span></h2>
+            <div class="event-container">
+                <div class="event">
+                    <img src="https://i.gifer.com/origin/a9/a9176696b8740c402d84b55374ea0107_w200.gif" alt="Event 1">
+                    <div class="event-details">
+                        <h3 style="color: #fee54d;">Global Trading Summit</h3>
+                        <p>Date: June 30, 2024 7.30PM IN</p>
+                        <p>Join industry experts and traders from around the world for our annual Global Trading Summit. Get insights, strategies, and networking opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-container">
+                <div class="event">
+                    <img src="https://i.giphy.com/media/l49JMVDvP8D38LHwI/giphy.webp" alt="Event 2">
+                    <div class="event-details">
+                        <h3 style="color: #fee54d;">Crypto Innovation Conference</h3>
+                        <p>Date: June 23, 2024 7.30PM IN</p>
+                        <p>Explore the latest trends and innovations in the crypto world. Discover new opportunities and connect with leading crypto enthusiasts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partner-text">
+            <h2>Associated with leading Companies</h2>
+            <p style="color: #fff; font-size: 17.15px; margin: 15px;
+            text-align: center;">Pioneering since 2013, our global reach spans partnerships with 30+ leading companies. Trust our seasoned expertise for unparalleled services and a legacy of excellence.</p>
+            <div class="partner-list">
+                <div class="partner">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/800px-MetaMask_Fox.svg.png" alt="Metamask">
+                </div>
+                <div class="partner">
+                    <img src="https://support.coingecko.com/hc/article_attachments/4499575478169/CoinGecko_logo.png" alt="CoinGecko<">
+                </div>
+                <div class="partner">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png" alt="Mastercard">
+                </div>
+                <div class="partner">
+                    <img src="https://futurecaps.com/wp-content/uploads/2021/11/federal-bank-2.png" alt="Fedaral Bank">
+                </div>
+                <div class="partner">
+                    <img src="https://static-00.iconduck.com/assets.00/tradingview-icon-512x512-7jcrwgg4.png" alt="TradingView">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <img src="https://binomopromo.com/p-assets/shared/assets/images/components/lui-logo/logo-light-8736e8c880844b6f6864.svg" style="max-width: 90px; margin-bottom:15px;" alt="Binomo">
+        <div class="footer-row">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://binomo.com/information/about">About Us</a></li>
+                        <li><a href="https://binomo.com/information/regulation">Regulations</a></li>
+                        <li><a href="https://binomo.com/information/agreement">Client Agreement</a></li>
+                        <li><a href="https://binomo.com/en/static/aml-policy-dolphin.pdf">AML Policy</a></li>
+                        <li><a href="https://binomo.com/en/promo/l79">Prestige Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://binomo.com/information/strategies">Strategies</a></li>
+                        <li><a href="https://binomo.com/information/pricing">Statuses</a></li>
+                        <li><a href="https://binomo.com/information/offers">Promtions</a></li>
+                        <li><a href="https://sphynxlabs.co/">Sphynx Lab - DEFI</a></li>
+                        <li><a href="https://binomo.com/information/tournaments">Tournaments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4 style="color: #757575;">CONTACTS</h4>
+                    <ul>
+                        
+                        <div class="social-icons">
+                <a href="https://www.facebook.com/BinomoBrand" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook2_colored_svg-512.png" alt="Facebook" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://twitter.com/page_binomo" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png" alt="Twitter" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://www.youtube.com/channel/UCwkD9jHgRANkwNWMKfZQm0w" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/395_Youtube_logo-512.png" alt="Youtube" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://www.instagram.com/binomo/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt="Instagram" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+            </div>
+                        
+                        <li style="margin-bottom: 9.75px; font-size: 12px; color: #304ffe">help@binomox.com</li>
+                        <li style="font-size: 12px;">Dolphin Corp LLC
+                        Euro House, Richmond Hill Road
+                        Kingstown, St. Vincent and Grenadines</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 style="color: #757575;">INSTALL APP</h4>
+            <div>
+                <a href="https://binomo.onelink.me/509527443/sastgk40?" target="_blank" style="margin: 7.5px;">
+    <img src="https://cdn.freebiesupply.com/logos/large/2x/google-play-badge-logo-png-transparent.png" alt="Download from Play Store" style="width: 100px; height: 30px;">
+</a>
+<a href="https://binomo.onelink.me/509527443/0z5vdjuh?" target="_blank" style="margin: 7.5px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="Download from App Store" style="width: 100px; height: 30px;">
+</a>
+            </div>
+                    </div>
+                </div>
+                <p style="margin-top: 45px;
+            text-align: center; font-size: 12px;
+            padding: 15px;
+            line-height: 1.45;">The financial operations on this site may involve risks. By using the tools and services provided here, you may incur financial losses up to a complete loss of the funds on your Binomo account. Please evaluate the risks and consult with an independent financial advisor before making any trades. Binomo is not responsible for any direct, indirect, consequential losses, or any other damages resulting from the user's actions on the platform. From 2018 to the present, Binomo is a category "A" member of the International Financial Commission, which guarantees our customers high-quality service, transparency, and dispute resolution by an independent regulator.</p>
+            <div class="footer-credits">
+            <p>&copy; 2014 - 2023 Binomox. All rights reserved.</p>
+        </div>
+            </div>
+    </footer>
+    </div>
+</body>
+</html>
