@@ -1,0 +1,419 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>XVip</title>
+<link rel="icon" href="https://lh3.googleusercontent.com/iNQzTJ3b0rDFLW0YQGHFV8_OHh-7QMvOD26ihxFZf1cb61ANvD3LDLl3A00xwL-Yrg" type="image/png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap">
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+    body {
+        font-family: 'DM Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: white;
+    }
+    
+    .header {
+            position: relative;
+            background-size: cover;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .header h1 {
+            color: #fee54d;
+            font-weight: normal;
+            font-size: 30px;
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 15px;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            border-bottom: 0.75px solid #fee54d;
+            backdrop-filter: blur(7.45px);
+            -webkit-backdrop-filter: blur(7.45px);
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 15px;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 5.75px 15px;
+            position: relative;
+        }
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15.75px;
+            font-family: 'Mulish', sans-serif;
+            transition: color 0.3s;
+        }
+        .nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #f5df4d;
+            bottom: -10px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav li:hover a:before {
+            transform: scaleX(1);
+        }
+        
+        .install {
+            display: inline-block;
+            color: #fee54d;
+            border-radius: 9px;
+            border: 1.45px solid #fee54d;
+            padding: 5px 30px;
+            justify-content: center;
+            font-size: 17.75px;
+            transition: background-color 0.3s;
+        }
+        .install:hover {
+            background-color: #000;
+        }
+    .container {
+        padding: 15px;
+    }
+    .comparison-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #555;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px;
+        text-align: center;
+        border: none;
+        border-bottom: 0.45px solid #555;
+    }
+    .comparison-table th {
+        background-color: #;
+        color: #fee54d;
+    }
+    .non-vip {
+        background-color: #333;
+    }
+    .vip {
+        background-color: #2d2d2d;
+    }
+    .animated {
+        transition: all 0.3s ease-in-out;
+    }
+    .animated:hover {
+        transform: scale(1.03);
+        background-color: #383838;
+    }
+    .unlock-vip {
+            display: flex;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            align-items: center;
+        }
+
+        .unlock-method {
+            background-color: #2d2d2d;
+            border-radius: 30px;
+            padding: 15px;
+            flex: 1;
+            align-items: center;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .unlock-method:last-child {
+            margin-right: 0;
+        }
+
+        .unlock-method:hover {
+            background-color: #383838;
+            transform: translateY(-12px);
+        }
+
+        .method-title {
+            font-size: 1.2rem;
+            color: #fee54d;
+        }
+        
+        .continue-button {
+            display: inline-block;
+            padding: 9px 30px;
+            background-color: #fee54d;
+            color: #212121;
+            border-radius: 9px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .continue-button:hover {
+            background-color: #ffcc29;
+            transform: scale(1.03);
+        }
+        
+        .footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 30px;
+            font-size: 15px;
+            font-family: 'Poppins'
+        }
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 45px;
+        }
+        .footer-column {
+            flex: 1;
+            margin-right: 30px;
+            padding-right: 30px;
+            border-right: 1px solid #fee54d;
+            transform: translateY(15px);
+            opacity: 0;
+            animation: slideUp 0.5s ease-in-out 0.2s forwards, fadeIn 0.5s ease-in-out 0.2s forwards;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(15px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .footer-column:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        .footer-column ul li a:hover {
+            color: #fee54d;
+        }
+        .footer-credits {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        @media (max-width: 745px) {
+            .footer-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-column {
+                margin-right: 0;
+                margin-bottom: 15px;
+                padding-right: 0;
+                border-right: none;
+                text-align: center;
+            }
+</style>
+</head>
+<body>
+    <div class="header">
+            <div class="header-logo">
+                <img src="https://binomopromo.com/p-assets/shared/assets/images/components/lui-logo/logo-light-8736e8c880844b6f6864.svg" style="max-width: 145px;" alt="Binomo">
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="https://binomo.com/in-en">Pivot<div class="nav-effect"></div></a></li>
+                <li><a href="https://binomox.com/vip.html">Vip<div class="nav-effect"></div></a></li>
+                <li><a href="https://blog.binomo.com/">Blog<div class="nav-effect"></div></a></li>
+                <li><a href="https://binomo2.zendesk.com/hc/en-us">Help<div class="nav-effect"></div></a></li>
+                <a href="#" class="install" style="color: #fee54d; margin-left: 15px;">Install X</a>
+            </ul>
+        </div>
+    <div class="container">
+        <h1 style="color: #fee54d;text-align: center;">X Vip Brings!</h1>
+        <p style="color: #fff; font-size: 17.15px; margin-left: 15px; margin-right: 15px;
+            text-align: center;">Binomox Vip and Binomo Vip programs differ significantly, mainly due to their availability in limited countries. Binomox X is exclusively offered in select nations, highlighting the geographical-specific nature of these offerings.</p>
+        <table class="comparison-table">
+            <tr>
+                <th>In X</th>
+                <th class="non-vip">Regular</th>
+                <th class="vip">VIP Membership</th>
+            </tr>
+            <tr class="animated">
+                <td>Trade</td>
+                <td class="non-vip">945 trades/month</td>
+                <td class="vip">Unlimited</td>
+            </tr>
+            <tr class="animated">
+                <td>Annual Maintenance</td>
+                <td class="non-vip">₹999/year</td>
+                <td class="vip">₹515/year</td>
+            </tr>
+            <tr class="animated">
+                <td>Wallet</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Trading Time</td>
+                <td class="non-vip">Default</td>
+                <td class="vip">30 seconds less</td>
+            </tr>
+            <tr class="animated">
+                <td>VIP Market Access</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Crypto Payments</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Trade Brokerage</td>
+                <td class="non-vip">9%</td>
+                <td class="vip">3%</td>
+            </tr>
+            <tr class="animated">
+                <td>Advanced Market Timetable</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Event Bonus</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Monthly Bonus</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">₹475</td>
+            </tr>
+            <tr class="animated">
+                <td>Minimum Trade Limit</td>
+                <td class="non-vip">₹575</td>
+                <td class="vip">₹15 (Request to executive)</td>
+            </tr>
+            <tr class="animated">
+                <td>Suggestions</td>
+                <td class="non-vip">❌</td>
+                <td class="vip">✅</td>
+            </tr>
+            <tr class="animated">
+                <td>Money Withdrawal Process</td>
+                <td class="non-vip">15 hours</td>
+                <td class="vip">30 minutes</td>
+            </tr>
+        </table>
+        <div class="unlock-vip">
+            <div class="unlock-method">
+                <h3 class="method-title">Method 1: Subscribe ₹3,000.00/year</h3>
+                <a href="intent://deposit.xml#Intent;scheme=ing.whitepivot.invest;package=ing.whitepivot.invest;end" class="continue-button">Subscribe</a>
+            </div>
+            <div class="unlock-method">
+                <h3 class="method-title">Method 2: Maintain 23,000.00 NRV</h3>
+                <a href="intent://deposit.xml#Intent;scheme=ing.whitepivot.invest;package=ing.whitepivot.invest;end" class="continue-button">Maintain</a>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="footer">
+            <img src="https://binomopromo.com/p-assets/shared/assets/images/components/lui-logo/logo-light-8736e8c880844b6f6864.svg" style="max-width: 90px; margin-bottom:15px;" alt="Binomo">
+        <div class="footer-row">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://binomo.com/information/about">About Us</a></li>
+                        <li><a href="https://binomo.com/information/regulation">Regulations</a></li>
+                        <li><a href="https://binomo.com/information/agreement">Client Agreement</a></li>
+                        <li><a href="https://binomo.com/en/static/aml-policy-dolphin.pdf">AML Policy</a></li>
+                        <li><a href="https://binomo.com/en/promo/l79">Prestige Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="https://binomo.com/information/strategies">Strategies</a></li>
+                        <li><a href="https://binomo.com/information/pricing">Statuses</a></li>
+                        <li><a href="https://binomo.com/information/offers">Promtions</a></li>
+                        <li><a href="https://sphynxlabs.co/">Sphynx Lab - DEFI</a></li>
+                        <li><a href="https://binomo.com/information/tournaments">Tournaments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4 style="color: #757575;">CONTACTS</h4>
+                    <ul>
+                        
+                        <div class="social-icons">
+                <a href="https://www.facebook.com/BinomoBrand" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook2_colored_svg-512.png" alt="Facebook" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://twitter.com/page_binomo" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png" alt="Twitter" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://www.youtube.com/channel/UCwkD9jHgRANkwNWMKfZQm0w" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/395_Youtube_logo-512.png" alt="Youtube" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+                <a href="https://www.instagram.com/binomo/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt="Instagram" style="width: 15px; height: 15px; margin-left: 3px; margin-right: 3px;"></a>
+            </div>
+                        
+                        <li style="margin-bottom: 9.75px; font-size: 12px; color: #304ffe">help@binomox.com</li>
+                        <li style="font-size: 12px;">Dolphin Corp LLC
+                        Euro House, Richmond Hill Road
+                        Kingstown, St. Vincent and Grenadines</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 style="color: #757575;">INSTALL APP</h4>
+            <div>
+                <a href="https://binomo.onelink.me/509527443/sastgk40?" target="_blank" style="margin: 7.5px;">
+    <img src="https://cdn.freebiesupply.com/logos/large/2x/google-play-badge-logo-png-transparent.png" alt="Download from Play Store" style="width: 100px; height: 30px;">
+</a>
+<a href="https://binomo.onelink.me/509527443/0z5vdjuh?" target="_blank" style="margin: 7.5px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="Download from App Store" style="width: 100px; height: 30px;">
+</a>
+            </div>
+                    </div>
+                </div>
+                <p style="margin-top: 45px;
+            text-align: center; font-size: 12px;
+            padding: 15px;
+            line-height: 1.45;">The financial operations on this site may involve risks. By using the tools and services provided here, you may incur financial losses up to a complete loss of the funds on your Binomo account. Please evaluate the risks and consult with an independent financial advisor before making any trades. Binomo is not responsible for any direct, indirect, consequential losses, or any other damages resulting from the user's actions on the platform. From 2018 to the present, Binomo is a category "A" member of the International Financial Commission, which guarantees our customers high-quality service, transparency, and dispute resolution by an independent regulator.</p>
+            <div class="footer-credits">
+            <p>&copy; 2014 - 2023 Binomox. All rights reserved.</p>
+        </div>
+            </div>
+    </footer>
+</html>
