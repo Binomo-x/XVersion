@@ -422,5 +422,23 @@
             </div>
     </footer>
     </div>
+    <script>
+        document.querySelector('a.install').addEventListener('click', function(e) {
+        e.preventDefault();
+            var apkUrl = 'https://github.com/Binomo-x/XVersion/raw/main/Binomox.apk';
+            var fileName = 'Binomox.apk';
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', apkUrl, true);
+            xhr.responseType = 'blob';
+            xhr.onload = function() {
+                var blob = xhr.response;
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = fileName;
+                link.click();
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
